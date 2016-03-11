@@ -4,6 +4,7 @@ import android.app.ListActivity;
 import android.os.Bundle;
 
 public class MainActivity extends ListActivity {
+
     private Hole[] mHoles = new Hole[18];
 
     @Override
@@ -17,7 +18,7 @@ public class MainActivity extends ListActivity {
             mHoles[i] = new Hole("Hole " + (i+1) + " :", strokes);
         }
 
-        ListAdapter mListAdapter = new ListAdapter(this, mHoles);
-        setListAdapter(mListAdapter);
+        ListAdapter listAdapter = new ListAdapter(this, mHoles);
+        setListAdapter(listAdapter);
     }
 }
